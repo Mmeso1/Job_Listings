@@ -1,35 +1,90 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Home from "./pages/Home";
+import logo from "./assets/logo.svg";
+import { Routes, Route, Outlet, NavLink } from "react-router-dom";
+
+const Navigation = () => {
+  return (
+    <div>
+      <header className="flex justify-between items-center p-10 poppins">
+        <img src={logo} alt="logo" />
+        <nav className="navigation flex">
+          <ul className="flex justify-center items-center gap-10">
+            <li>
+              <NavLink
+                to="home"
+                className={({ isActive }) =>
+                  isActive ? "active-link" : undefined
+                }
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/empty"
+                className={({ isActive }) =>
+                  isActive ? "active-link" : undefined
+                }
+              >
+                Find Jobs
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/empty"
+                className={({ isActive }) =>
+                  isActive ? "active-link" : undefined
+                }
+              >
+                Employers
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/empty"
+                className={({ isActive }) =>
+                  isActive ? "active-link" : undefined
+                }
+              >
+                Admin
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/empty"
+                className={({ isActive }) =>
+                  isActive ? "active-link" : undefined
+                }
+              >
+                About Us
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+        <section className="cta flex gap-4">
+          <button>
+            <NavLink to="/empty">Contact Us</NavLink>{" "}
+          </button>
+          <button>
+            <NavLink to="/empty">Login</NavLink>
+          </button>
+        </section>
+      </header>
+      <Outlet />
+    </div>
+  );
+};
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route path="home" element={<Home />} />
+        {/* <Route path="login" element={<h1>Login</h1>} /> */}
+      </Route>
+    </Routes>
+  );
 }
 
-export default App
+export default App;
