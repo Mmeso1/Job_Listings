@@ -124,7 +124,7 @@ const Home = () => {
           View all
         </p>
       </section>
-      <section className="hiring-companies mx-24 flex flex-col justify-center my-14">
+      <section className="hiring-companies mx-24 flex flex-col justify-center mt-14 mb-20">
         <div className="flex items-center">
           <span></span>
           <p className="text-2xl text-[#5E6670] px-6 font-light">
