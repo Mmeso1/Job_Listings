@@ -2,6 +2,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import EmptyComponent from "./pages/EmptyComponent";
+import Register from "./pages/Register";
 import logo from "./assets/logo.svg";
 import { Routes, Route, Outlet, NavLink } from "react-router-dom";
 
@@ -84,6 +85,7 @@ function App() {
       <Route path="/" element={<Navigation />}>
         <Route path="home" element={<Home />} />
         <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
         <Route path="/find-jobs" element={<EmptyComponent />} />
         <Route path="/employers" element={<EmptyComponent />} />
         <Route path="/admin" element={<EmptyComponent />} />

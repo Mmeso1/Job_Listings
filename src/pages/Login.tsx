@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import man from "../assets/auth/man-on-chair.svg";
 import InputField from "../components/auth-input";
 import { google, linkedin, facebook } from "../assets";
@@ -82,7 +83,9 @@ const Login = () => {
             </div>
             <p className="text-[#303030] text-lg text-center mt-10">
               Don't have an account?{" "}
-              <span className="text-[#2D31AB] underline">Register</span>
+              <Link to="/register" className="text-[#2D31AB] underline">
+                Register
+              </Link>
             </p>
           </div>
 
