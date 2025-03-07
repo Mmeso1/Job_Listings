@@ -1,9 +1,16 @@
-import heroImg from "../assets/hero-img.svg";
-import searchIcon from "../assets/Hero/fi_search.svg";
-import mapIcon from "../assets/Hero/fi_map-pin.svg";
-import apple from "../assets/apple-logo.svg";
-import google from "../assets/google.svg";
-import intel from "../assets/intel.svg";
+import {
+  heroImg,
+  searchIcon,
+  mapIcon,
+  apple,
+  google,
+  intel,
+  Google,
+  Microsoft,
+  Flipkart,
+  Youtube,
+  IBM,
+} from "../assets";
 import Button from "../components/button";
 import JobCard from "../components/job-card";
 import { ICardDetails } from "../types/cardDetails";
@@ -104,6 +111,22 @@ const Home = () => {
         <p className="text-xl text-[#6300B3] border-b-2 border-b-purple-500 w-auto inline-block cursor-pointer">
           View all
         </p>
+      </section>
+      <section className="hiring-companies mx-24 flex flex-col justify-center my-14">
+        <div className="flex items-center">
+          <span></span>
+          <p className="text-2xl text-[#5E6670] px-6 font-light">
+            Top companies hiring now
+          </p>
+          <span></span>
+        </div>
+        <div className="flex items-center justify-between gap-12 mt-10">
+          <img src={Google} alt="google name logo" />
+          <img src={Microsoft} alt="microsoft logo name" />
+          <img src={Flipkart} alt="flipcart logo name" />
+          <img src={Youtube} alt="youtube logo name" />
+          <img src={IBM} alt="ibm logo name" />
+        </div>
       </section>
     </>
   );

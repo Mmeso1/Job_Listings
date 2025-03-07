@@ -29,3 +29,10 @@ h1 {
   color: #767f8c;
   font-weight: 300;
 }
+
+.hiring-companies > div > span {
+  border: 0.5px solid #e4e5e8;
+  width: 35%;
+  height: 50%;
+  display: flex;
+}
