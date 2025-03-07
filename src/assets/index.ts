@@ -14,6 +14,8 @@ import fb from "./footer/facebook.svg";
 import yt from "./footer/youtube.svg";
 import ig from "./footer/instagram.svg";
 import x from "./footer/twitter.svg";
+import facebook from "./auth/facebook.svg";
+import linkedin from "./auth/linkedin.svg";
 
 export {
   heroImg,
@@ -32,4 +34,6 @@ export {
   yt,
   ig,
   x,
+  facebook,
+  linkedin,
 };

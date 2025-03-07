@@ -19,12 +19,12 @@ const InputField = ({ label, placeholder, password }: InputFieldProps) => {
           type={password && !showPassword ? "password" : "text"}
           id="input"
           placeholder={placeholder}
-          className="p-3 border border-gray-200 rounded-lg w-full pr-14"
+          className="p-3 border border-gray-200 rounded-lg w-full pr-14 h-18"
         />
         {password && (
           <button
             type="button"
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm font-medium"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#2D31AB] text-sm font-medium"
             onClick={() => setShowPassword(!showPassword)}
           >
             {showPassword ? "Hide" : "Show"}
