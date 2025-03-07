@@ -1,5 +1,7 @@
 import "./App.css";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
+import EmptyComponent from "./pages/EmptyComponent";
 import logo from "./assets/logo.svg";
 import { Routes, Route, Outlet, NavLink } from "react-router-dom";
 
@@ -22,7 +24,7 @@ const Navigation = () => {
             </li>
             <li>
               <NavLink
-                to="/empty"
+                to="/find-jobs"
                 className={({ isActive }) =>
                   isActive ? "active-link" : undefined
                 }
@@ -32,7 +34,7 @@ const Navigation = () => {
             </li>
             <li>
               <NavLink
-                to="/empty"
+                to="employers"
                 className={({ isActive }) =>
                   isActive ? "active-link" : undefined
                 }
@@ -42,7 +44,7 @@ const Navigation = () => {
             </li>
             <li>
               <NavLink
-                to="/empty"
+                to="admin"
                 className={({ isActive }) =>
                   isActive ? "active-link" : undefined
                 }
@@ -52,7 +54,7 @@ const Navigation = () => {
             </li>
             <li>
               <NavLink
-                to="/empty"
+                to="about-us"
                 className={({ isActive }) =>
                   isActive ? "active-link" : undefined
                 }
@@ -64,10 +66,10 @@ const Navigation = () => {
         </nav>
         <section className="cta flex gap-4">
           <button>
-            <NavLink to="/empty">Contact Us</NavLink>{" "}
+            <NavLink to="contact-us">Contact Us</NavLink>{" "}
           </button>
           <button>
-            <NavLink to="/empty">Login</NavLink>
+            <NavLink to="/login">Login</NavLink>
           </button>
         </section>
       </header>
@@ -81,7 +83,12 @@ function App() {
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route path="home" element={<Home />} />
-        {/* <Route path="login" element={<h1>Login</h1>} /> */}
+        <Route path="login" element={<Login />} />
+        <Route path="/find-jobs" element={<EmptyComponent />} />
+        <Route path="/employers" element={<EmptyComponent />} />
+        <Route path="/admin" element={<EmptyComponent />} />
+        <Route path="/about-us" element={<EmptyComponent />} />
+        <Route path="/contact-us" element={<EmptyComponent />} />
       </Route>
     </Routes>
   );
