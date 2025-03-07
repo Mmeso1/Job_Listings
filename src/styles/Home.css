@@ -1,4 +1,5 @@
-.hero {
+.hero,
+footer {
   background: linear-gradient(
     135deg,
     rgba(197, 153, 229, 0.4) 0%,
@@ -35,4 +36,36 @@ h1 {
   width: 35%;
   height: 50%;
   display: flex;
+}
+
+.top-footer h3 {
+  color: #6300b3;
+  font-size: 20px;
+}
+
+.top-footer .quick-links,
+.top-footer .candidate,
+.top-footer .employers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.top-footer .quick-links > div,
+.top-footer .candidate > div,
+.top-footer .employers > div {
+  margin-top: 0.5rem;
+}
+
+.top-footer .quick-links a,
+.top-footer .candidate a,
+.top-footer .employers a {
+  color: #9199a3;
+  text-decoration: none;
+}
+
+.top-footer .quick-links a:hover,
+.top-footer .candidate a:hover,
+.top-footer .employers a:hover {
+  color: #ae71db;
 }

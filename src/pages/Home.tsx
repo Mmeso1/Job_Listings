@@ -10,11 +10,17 @@ import {
   Flipkart,
   Youtube,
   IBM,
+  logo,
+  fb,
+  yt,
+  ig,
+  x,
 } from "../assets";
 import Button from "../components/button";
 import JobCard from "../components/job-card";
 import { ICardDetails } from "../types/cardDetails";
 import "../styles/home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const cardDetails: ICardDetails[] = [
@@ -67,13 +73,19 @@ const Home = () => {
                 type="text"
                 id="job-title"
                 placeholder="Job tittle, Keyword..."
+                className="outline-none"
               />
             </div>
             <div className="flex gap-2 border-l border-gray-400">
               <label htmlFor="location" className="pl-4">
                 <img src={mapIcon} alt="map icon" />
               </label>
-              <input type="text" id="location" placeholder="Location" />
+              <input
+                type="text"
+                id="location"
+                placeholder="Location"
+                className="outline-none"
+              />
             </div>
             <div>
               <Button label="Find Job" theme="dark" />
@@ -128,6 +140,59 @@ const Home = () => {
           <img src={IBM} alt="ibm logo name" />
         </div>
       </section>
+      <footer className="flex flex-col items-center px-20 py-27">
+        <div className="top-footer flex justify-between items-start px-10 py-7 w-full">
+          <div className="flex flex-col mt-3">
+            <img src={logo} alt="logo" className="w-[180px]" />
+            <p className="text-[#5E6670] text-lg font-light mt-7 mb-4">
+              Call now:{" "}
+              <span className="text-[#AE71DB] font-normal">+91 9591776078</span>
+            </p>
+            <p className="text-[#767F8C] text-sm font-light w-56">
+              456 Chandni Chowk Street, Near Red Fort, Old Delhi, New Delhi,
+              Delhi 110006, India
+            </p>
+          </div>
+          <div className="quick-links">
+            <h3 className="text-[#6300B3]">Quick Link </h3>
+            <div className="flex flex-col gap-2">
+              <Link to="">About</Link>
+              <Link to="">Contact</Link>
+              <Link to="">Admin</Link>
+            </div>
+          </div>
+          <div className="candidate">
+            <h3 className="text-[#6300B3]">Candidate</h3>
+            <div className="flex flex-col gap-2">
+              <Link to="">Browse Jobs </Link>
+              <Link to="">Browse Employers</Link>
+              <Link to="">Candidate Dashboard</Link>
+              <Link to="">Saved Jobs</Link>
+            </div>
+          </div>
+          <div className="employers">
+            <h3 className="text-[#6300B3]">Employers</h3>
+            <div className="flex flex-col gap-2">
+              <Link to="">Post a Job</Link>
+              <Link to="">Browse Candidates</Link>
+              <Link to="">Employees Dashboard</Link>
+              <Link to="">Applications</Link>
+            </div>
+          </div>
+        </div>
+        <div className="bottom-footer flex justify-between items-center w-full px-10 py-4 border-t border-gray-400">
+          <p className="text-[#B781DF] text-sm">
+            @ 2022 AlwaysApply - Job Portal. All rights Reserved
+          </p>
+
+          <div className="social-icons flex items-center gap-4">
+            <img src={fb} alt="facebook logo" />
+            <img src={yt} alt="youtube logo" />
+            <img src={ig} alt="ig logo" />
+            <img src={x} alt="twitter logo" />
+          </div>
+        </div>
+      </footer>
     </>
   );
 };
