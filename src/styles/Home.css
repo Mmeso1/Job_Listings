@@ -20,3 +20,12 @@
 .search input::placeholder {
   color: #9199a3;
 }
+
+h1 {
+  color: #303030;
+}
+
+.light-p {
+  color: #767f8c;
+  font-weight: 300;
+}
