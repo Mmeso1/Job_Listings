@@ -16,7 +16,7 @@ const Navigation = () => {
           <ul className="flex justify-center items-center gap-10">
             <li>
               <NavLink
-                to="home"
+                to="/"
                 className={({ isActive }) =>
                   isActive ? "active-link" : undefined
                 }
@@ -84,10 +84,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Navigation />}>
-        <Route path="home" element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-        <Route path="/find-jobs" element={<Jobs />} /> */
+        <Route path="/find-jobs" element={<Jobs />} />
         <Route path="/employers" element={<EmptyComponent />} />
         <Route path="/admin" element={<EmptyComponent />} />
         <Route path="/about-us" element={<EmptyComponent />} />
