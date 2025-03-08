@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <div className="mx-27 my-16">
       <div className="flex flex-col gap-2 mb-10">
-        <h1 className="font-semibold text-5xl text-[#303030]">
+        <h1 className="font-semibold  text-4xl lg:5xl text-[#303030]">
           Login to your Account
         </h1>
         <p className="text-[#5E6670] text-xl">
@@ -89,7 +89,7 @@ const Login = () => {
             </p>
           </div>
 
-          <img src={man} alt="login page image" className="hidden md:block" />
+          <img src={man} alt="login page image" className="hidden lg:block" />
         </div>
       </div>
     </div>

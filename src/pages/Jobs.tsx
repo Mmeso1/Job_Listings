@@ -25,7 +25,7 @@ const Jobs = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto lg:px-4 py-16">
       <div className="flex flex-col gap-2 mb-10">
         <h1 className="font-semibold text-5xl text-[#303030]">Job Search</h1>
         <p className="text-[#5E6670] text-xl">
@@ -33,50 +33,50 @@ const Jobs = () => {
         </p>
       </div>
 
-      <div
-        className="search px-2 py-4 mt-10 rounded-lg"
-        style={{ background: "#F2F2F2" }}
-      >
-        <div className="flex items-center pl-4 gap-2 ">
+      <div className="search px-4 py-6 mt-10 rounded-lg bg-[#F2F2F2] max-lg:w-full max-lg:flex max-lg:flex-col max-lg:gap-6">
+        <div className="flex items-center pl-4 gap-2 mb-4 max-lg:gap-4 max-lg:w-full">
           <label htmlFor="job-title">
-            <img src={search} alt="map icon" />
+            <img src={search} alt="search icon" />
           </label>
           <input
             type="text"
             id="job-title"
             placeholder="Enter Job title"
-            className="outline-none"
+            className="outline-none w-full py-2 px-4 border-b border-gray-300"
           />
         </div>
-        <div className="flex items-center gap-2 border-l border-gray-400">
-          <label htmlFor="location" className="pl-4">
-            <img src={location} alt="map icon" />
+
+        <div className="flex items-center pl-4 gap-2 mb-4 max-lg:gap-4 max-lg:w-full">
+          <label htmlFor="location">
+            <img src={location} alt="location icon" />
           </label>
           <input
             type="text"
             id="location"
             placeholder="Enter location"
-            className="outline-none"
+            className="outline-none w-full py-2 px-4 border-b border-gray-300"
           />
         </div>
-        <div className="flex items-center gap-2 border-l border-gray-400">
-          <label htmlFor="experience" className="pl-4">
-            <img src={experience} alt="map icon" />
+
+        <div className="flex items-center pl-4 gap-2 mb-4 max-lg:gap-4 max-lg:w-full">
+          <label htmlFor="experience">
+            <img src={experience} alt="experience icon" />
           </label>
           <input
             type="text"
             id="experience"
             placeholder="Years of experience"
-            className="outline-none"
+            className="outline-none w-full py-2 px-4 border-b border-gray-300"
           />
         </div>
+
         <div>
           <Button label="Search" theme="dark" />
         </div>
       </div>
 
-      <div className="job-listing flex items-start justify-between gap-20 mt-20">
-        <div className="flex-1 flex-col gap-8 mb-4">
+      <div className="job-listing flex flex-col lg:flex-row items-start justify-between gap-20 mt-20">
+        <div className="max-lg:w-full flex-1 w-7 gap-8 mb-4">
           <div className="heading flex justify-between mb-7">
             <p className="text-lg font-semibold">Filter</p>
             <button className="text-[#5E6670] cursor-pointer">Clear All</button>
@@ -135,7 +135,7 @@ const Jobs = () => {
           </div>
         </div>
 
-        <div className="job-list">
+        <div className="job-list flex-2 max-lg:mx-auto">
           <div className="heading flex justify-between items-center">
             <p>All Jobs ({cardDetails.length})</p>
             <select name="options" id="">
@@ -145,7 +145,7 @@ const Jobs = () => {
 
           {cardDetails.length > 0 ? (
             <>
-              <div className="job-cards grid grid-cols-1 md:grid-cols-2 gap-16 mt-8">
+              <div className="job-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 mt-8">
                 {displayedJobs.map((card, index) => (
                   <JobCard
                     key={index}
@@ -156,7 +156,7 @@ const Jobs = () => {
                     role={card.role}
                     salary={card.salary}
                     type={card.type}
-                    width="400px"
+                    width="auto" // flexible width
                     onClick={() => openModal(card)}
                   />
                 ))}

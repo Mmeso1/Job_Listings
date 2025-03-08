@@ -15,11 +15,11 @@ const Navigation = () => {
   return (
     <div>
       <header className="flex justify-between items-center p-5 md:p-10 poppins bg-white shadow-md">
-        <img src={logo} alt="logo" className="h-10 lg:max-xl:h-6" />
+        <img src={logo} alt="logo" className="h-6 md:h-8 lg:h-10" />
 
         {/* Hamburger Menu Button (Visible only on mobile) */}
         <button
-          className="md:hidden text-gray-700"
+          className="lg:hidden text-gray-700"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -27,11 +27,11 @@ const Navigation = () => {
 
         {/* Navigation Links (Hidden on mobile, shown when menu is open) */}
         <nav
-          className={`absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent md:flex transition-all duration-300 ${
+          className={`absolute lg:static top-20 lg:top-16 left-0 w-full lg:w-auto bg-white lg:bg-transparent lg:flex transition-all duration-300 ${
             isOpen ? "block shadow-md p-5" : "hidden"
           }`}
         >
-          <ul className="flex flex-col md:flex-row items-center gap-5 md:max-lg:gap-4 md:gap-10">
+          <ul className="flex flex-col lg:flex-row items-center gap-5 lg:max-lg:gap-4 lg:gap-10">
             <li>
               <NavLink
                 to="/"
@@ -92,8 +92,8 @@ const Navigation = () => {
 
         {/* Call to Action Buttons (Same visibility as nav) */}
         <section
-          className={`absolute md:static top-[calc(100%+10px)] left-0 w-full md:w-auto bg-white md:bg-transparent flex flex-col md:flex-row items-center gap-4 p-5 md:p-0 ${
-            isOpen ? "block shadow-md" : "hidden md:flex"
+          className={`absolute lg:static top-[calc(100%+10px)] left-0 w-full lg:w-auto bg-white lg:bg-transparent flex flex-col lg:flex-row items-center gap-4 p-5 lg:p-0 ${
+            isOpen ? "block shadow-md" : "hidden lg:flex"
           }`}
         >
           <button className="bg-[#6300B3] text-white px-4 py-2 rounded-md">
