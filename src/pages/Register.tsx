@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import WhatsappLogo from "../assets/whatsapp.svg";
 import InputField from "../components/auth-input";
 import { google, linkedin, facebook } from "../assets";
@@ -75,6 +74,38 @@ const Register = () => {
                 Register now
               </button>
             </form>
+
+            <div className="flex items-center mx-auto w-1/2 my-20">
+              <span className="flex-1 border-b border-gray-300"></span>
+              <p className="text-2xl text-[#5E6670] px-3 font-light">
+                or sign up with
+              </p>
+              <span className="flex-1 border-b border-gray-300"></span>
+            </div>
+
+            <div className="flex justify-center items-center gap-5">
+              <button className="cursor-pointer">
+                <img
+                  className="p-4 border border-gray-50 rounded-lg shadow-[0px_2px_4px_rgba(0,0,0,0.2)] h-16"
+                  src={google}
+                  alt="google"
+                />
+              </button>
+              <button className="cursor-pointer">
+                <img
+                  className="p-4 border border-gray-50 rounded-lg shadow-[0px_2px_4px_rgba(0,0,0,0.2)] h-16"
+                  src={facebook}
+                  alt="facebook"
+                />
+              </button>
+              <button className="cursor-pointer">
+                <img
+                  className="p-4 border border-gray-50 rounded-lg shadow-[0px_2px_4px_rgba(0,0,0,0.2)] h-16"
+                  src={linkedin}
+                  alt="linkedin"
+                />
+              </button>
+            </div>
           </div>
         </div>
       </div>
