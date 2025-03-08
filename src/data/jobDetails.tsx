@@ -27,6 +27,12 @@ export const cardDetails: ICardDetails[] = [
     applicants: "10+ applicants",
     description:
       "Provide technical assistance to customers, troubleshoot software and hardware issues, and maintain detailed records of support interactions.",
+    details: [
+      "Create wireframes, prototypes, and high-fidelity mockups.",
+      "Conduct usability testing and gather user feedback.",
+      "Maintain design system and ensure consistency across products.",
+    ],
+
     benefits: [
       "Flexible hours",
       "Training and development opportunities",
@@ -43,6 +49,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "9+ applicants",
     description:
       "Design intuitive and visually appealing user interfaces, conduct user research, and collaborate with developers to implement designs.",
+    details: [
+      "Plan and execute marketing campaigns across various channels.",
+      "Create engaging content for social media and websites.",
+      "Analyze marketing data and generate reports.",
+    ],
     benefits: [
       "Comprehensive health insurance",
       "Generous PTO",
@@ -60,6 +71,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "30+ applicants",
     description:
       "Develop and implement marketing strategies, manage social media campaigns, and analyze marketing performance.",
+    details: [
+      "Create wireframes, prototypes, and high-fidelity mockups.",
+      "Conduct usability testing and gather user feedback.",
+      "Maintain design system and ensure consistency across products.",
+    ],
     benefits: [
       "Performance-based bonuses",
       "Flexible work arrangements",
@@ -76,6 +92,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "9+ applicants",
     description:
       "Design intuitive and visually appealing user interfaces, conduct user research, and collaborate with developers to implement designs.",
+    details: [
+      "Plan and execute marketing campaigns across various channels.",
+      "Create engaging content for social media and websites.",
+      "Analyze marketing data and generate reports.",
+    ],
     benefits: [
       "Comprehensive health insurance",
       "Generous PTO",
@@ -93,6 +114,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "30+ applicants",
     description:
       "Develop and implement marketing strategies, manage social media campaigns, and analyze marketing performance.",
+    details: [
+      "Plan and execute marketing campaigns across various channels.",
+      "Create engaging content for social media and websites.",
+      "Analyze marketing data and generate reports.",
+    ],
     benefits: [
       "Performance-based bonuses",
       "Flexible work arrangements",
@@ -109,6 +135,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "30+ applicants",
     description:
       "Develop and implement marketing strategies, manage social media campaigns, and analyze marketing performance.",
+    details: [
+      "Plan and execute marketing campaigns across various channels.",
+      "Create engaging content for social media and websites.",
+      "Analyze marketing data and generate reports.",
+    ],
     benefits: [
       "Performance-based bonuses",
       "Flexible work arrangements",
@@ -125,6 +156,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "20+ applicants",
     description:
       "Develop and maintain user interfaces for web applications, write clean and efficient code, and collaborate with backend developers.",
+    details: [
+      "Build responsive and accessible web interfaces.",
+      "Implement UI designs and ensure cross-browser compatibility.",
+      "Write unit and integration tests.",
+    ],
     benefits: [
       "Competitive salary and benefits",
       "Remote work options",
@@ -142,6 +178,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "15+ applicants",
     description:
       "Design and implement server-side logic, develop APIs, and manage databases.",
+    details: [
+      "Develop and maintain backend services and APIs.",
+      "Optimize database performance and ensure data integrity.",
+      "Implement security best practices.",
+    ],
     benefits: [
       "Relocation assistance",
       "Pension plan",
@@ -159,6 +200,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "25+ applicants",
     description:
       "Analyze large datasets, develop machine learning models, and communicate insights to stakeholders.",
+    details: [
+      "Collect and preprocess data from various sources.",
+      "Build and evaluate machine learning models.",
+      "Present findings and recommendations to business teams.",
+    ],
     benefits: [
       "Flexible hours",
       "Data science conferences",
@@ -176,6 +222,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "40+ applicants",
     description:
       "Define product vision and strategy, prioritize features, and collaborate with engineering and design teams to deliver successful products.",
+    details: [
+      "Conduct market research and identify customer needs.",
+      "Create product roadmaps and prioritize features.",
+      "Work with cross-functional teams to launch and iterate on products.",
+    ],
     benefits: [
       "Stock awards",
       "Paid parental leave",
@@ -193,6 +244,12 @@ export const cardDetails: ICardDetails[] = [
     applicants: "18+ applicants",
     description:
       "Develop and maintain mobile applications for iOS and Android platforms, write clean and efficient code, and collaborate with designers.",
+
+    details: [
+      "Build native or cross-platform mobile apps.",
+      "Implement UI designs and ensure performance.",
+      "Write unit and UI tests.",
+    ],
     benefits: [
       "Relocation support",
       "Language training",
@@ -210,6 +267,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "22+ applicants",
     description:
       "Design and implement cloud infrastructure, manage cloud services, and automate deployment processes.",
+    details: [
+      "Deploy and manage applications on cloud platforms (AWS, Azure, GCP).",
+      "Automate infrastructure provisioning and configuration.",
+      "Monitor cloud performance and ensure security.",
+    ],
     benefits: [
       "Cloud certifications",
       "Remote work setup",
@@ -227,6 +289,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "35+ applicants",
     description:
       "Manage recruitment, onboarding, and employee relations, develop HR policies, and ensure compliance with labor laws.",
+    details: [
+      "Source and recruit top talent.",
+      "Manage employee onboarding and offboarding processes.",
+      "Develop and implement HR policies and procedures.",
+    ],
     benefits: [
       "HR conferences",
       "Leadership training",
@@ -244,6 +311,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "14+ applicants",
     description:
       "Plan, execute, and monitor projects, manage project scope and budget, and communicate with stakeholders.",
+    details: [
+      "Define project scope and objectives.",
+      "Create project schedules and track progress.",
+      "Manage project risks and issues.",
+    ],
     benefits: [
       "Project management certifications",
       "Open source contributions",
@@ -261,6 +333,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "50+ applicants",
     description:
       "Automate software delivery processes, manage infrastructure, and ensure system reliability.",
+    details: [
+      "Implement CI/CD pipelines.",
+      "Manage and monitor infrastructure using automation tools.",
+      "Troubleshoot and resolve system issues.",
+    ],
     benefits: [
       "DevOps training",
       "Infrastructure as code workshops",
@@ -278,6 +355,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "10+ applicants",
     description:
       "Optimize websites for search engines, conduct keyword research, and analyze website traffic.",
+    details: [
+      "Perform on-page and off-page SEO optimization.",
+      "Conduct keyword research and competitor analysis.",
+      "Track and analyze website traffic and rankings.",
+    ],
     benefits: [
       "SEO conferences",
       "Remote work flexibility",
@@ -295,6 +377,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "12+ applicants",
     description:
       "Create engaging and informative content for websites, blogs, and marketing materials.",
+    details: [
+      "Write blog posts, articles, and website copy.",
+      "Conduct research and ensure content accuracy.",
+      "Edit and proofread content.",
+    ],
     benefits: [
       "Content writing workshops",
       "Flexible hours",
@@ -312,6 +399,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "30+ applicants",
     description:
       "Manage and maintain databases, optimize database performance, and ensure data security.",
+    details: [
+      "Install and configure database software.",
+      "Monitor database performance and troubleshoot issues.",
+      "Implement backup and recovery procedures.",
+    ],
     benefits: [
       "Database certifications",
       "Data security training",
@@ -329,6 +421,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "28+ applicants",
     description:
       "Analyze system requirements, design system solutions, and provide technical support to users.",
+    details: [
+      "Gather and analyze user requirements.",
+      "Design system specifications and workflows.",
+      "Provide technical support and training to users.",
+    ],
     benefits: [
       "Systems analysis training",
       "Technical support certifications",
@@ -346,6 +443,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "20+ applicants",
     description:
       "Design, implement, and maintain network infrastructure, troubleshoot network issues, and ensure network security.",
+    details: [
+      "Configure and maintain network devices (routers, switches, firewalls).",
+      "Monitor network performance and troubleshoot issues.",
+      "Implement network security measures.",
+    ],
     benefits: [
       "Network certifications",
       "Remote network access",
@@ -363,6 +465,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "10+ applicants",
     description:
       "Monitor and analyze security threats, implement security measures, and respond to security incidents.",
+    details: [
+      "Conduct security assessments and penetration testing.",
+      "Implement security controls and policies.",
+      "Respond to security incidents and investigate breaches.",
+    ],
     benefits: [
       "Security certifications",
       "Cybersecurity conferences",
@@ -380,6 +487,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "8+ applicants",
     description:
       "Develop and maintain both frontend and backend components of web applications.",
+    details: [
+      "Develop and maintain full-stack applications.",
+      "Design and implement APIs.",
+      "Write unit and integration tests.",
+    ],
     benefits: [
       "Full-stack development training",
       "Innovation time",
@@ -397,6 +509,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "18+ applicants",
     description:
       "Design visually appealing and user-friendly websites, create website layouts, and ensure website responsiveness.",
+    details: [
+      "Create website mockups and prototypes.",
+      "Implement UI designs and ensure cross-browser compatibility.",
+      "Optimize website performance and usability.",
+    ],
     benefits: [
       "Design software access",
       "Creative workshops",
@@ -414,6 +531,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "25+ applicants",
     description:
       "Develop and program video games, create game mechanics, and optimize game performance.",
+    details: [
+      "Write game code and implement game logic.",
+      "Create and integrate game assets.",
+      "Optimize game performance and ensure stability.",
+    ],
     benefits: [
       "Game development tools",
       "Game jams",
@@ -431,6 +553,11 @@ export const cardDetails: ICardDetails[] = [
     applicants: "40+ applicants",
     description:
       "Develop and implement artificial intelligence and machine learning models, research and develop new AI algorithms.",
+    details: [
+      "Develop and deploy AI and machine learning models.",
+      "Research and implement new AI algorithms.",
+      "Optimize AI model performance and accuracy.",
+    ],
     benefits: [
       "AI research time",
       "AI conferences",

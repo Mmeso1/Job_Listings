@@ -13,7 +13,9 @@ const Button: React.FC<ButtonProps> = ({ label, theme, color }) => {
       : "bg-white text-[#6300b3] border border-[#6300b3]";
 
   return (
-    <button className={`p-2 rounded w-[120px] h-auto ${buttonClass} ${color}`}>
+    <button
+      className={`p-2 rounded w-[120px] h-auto ${buttonClass} ${color} cursor-pointer`}
+    >
       {label}
     </button>
   );

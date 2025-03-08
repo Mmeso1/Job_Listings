@@ -2,13 +2,27 @@ import Button from "../components/button";
 import { search, experience, location } from "../assets";
 import { cardDetails } from "../data/jobDetails";
 import JobCard from "../components/job-card";
+import JobModal from "../components/job-modal";
 import { useState } from "react";
+import { ICardDetails } from "../types/cardDetails";
 
 const Jobs = () => {
   const [showAllJobs, setShowAllJobs] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [currentJob, setCurrentJob] = useState<ICardDetails | null>(null);
 
   // Show first 10 jobs by default
   const displayedJobs = showAllJobs ? cardDetails : cardDetails.slice(0, 10);
+
+  const openModal = (jobDetails: ICardDetails) => {
+    setCurrentJob(jobDetails);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setCurrentJob(null);
+  };
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -129,32 +143,44 @@ const Jobs = () => {
             </select>
           </div>
 
-          <div className="job-cards grid grid-cols-1 md:grid-cols-2 gap-16 mt-8">
-            {displayedJobs.map((card, index) => (
-              <JobCard
-                key={index}
-                applicants={card.applicants}
-                company={card.company}
-                location={card.location}
-                logo={card.logo}
-                role={card.role}
-                salary={card.salary}
-                type={card.type}
-                width="400px"
-              />
-            ))}
-          </div>
+          {cardDetails.length > 0 ? (
+            <>
+              <div className="job-cards grid grid-cols-1 md:grid-cols-2 gap-16 mt-8">
+                {displayedJobs.map((card, index) => (
+                  <JobCard
+                    key={index}
+                    applicants={card.applicants}
+                    company={card.company}
+                    location={card.location}
+                    logo={card.logo}
+                    role={card.role}
+                    salary={card.salary}
+                    type={card.type}
+                    width="400px"
+                    onClick={() => openModal(card)}
+                  />
+                ))}
+              </div>
 
-          {/* View More Button */}
-          {!showAllJobs && (
-            <div className="mt-6 text-center">
-              <p
-                className="text-[#6300B3] underline cursor-pointer"
-                onClick={() => setShowAllJobs(true)}
-              >
-                View More
-              </p>
-            </div>
+              {/* Modal Component */}
+              <JobModal
+                showModal={showModal}
+                jobDetails={currentJob}
+                closeModal={closeModal}
+              />
+              {!showAllJobs && (
+                <div className="mt-6 text-center">
+                  <p
+                    className="text-[#6300B3] underline cursor-pointer"
+                    onClick={() => setShowAllJobs(true)}
+                  >
+                    View More
+                  </p>
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="text-center mt-8">No Jobs Found</div>
           )}
         </div>
       </div>

@@ -4,7 +4,11 @@ import groupIcon from "../assets/group-img.png";
 import Button from "./button";
 import { ICardDetails } from "../types/cardDetails";
 
-const JobCard: React.FC<ICardDetails> = ({
+interface JobCardProps extends ICardDetails {
+  onClick: () => void;
+}
+
+const JobCard: React.FC<JobCardProps> = ({
   role,
   type,
   salary,
@@ -13,11 +17,13 @@ const JobCard: React.FC<ICardDetails> = ({
   location,
   applicants,
   width,
+  onClick,
 }) => {
   return (
     <div
       className="bg-[#F8F2FC] border border-[#EFE2F8] rounded-lg p-4 cursor-pointer"
       style={{ width: width ? width : "365px" }}
+      onClick={onClick}
     >
       <div className="top flex flex-col">
         <div className="flex justify-between">
