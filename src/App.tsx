@@ -112,7 +112,7 @@ const Navigation = () => {
 
         {/* Call to Action Buttons (Same visibility as nav) */}
         <section
-          className={`lg:static w-auto hidden lg:w-auto bg-white lg:bg-transparent lg:flex-row items-center gap-4 p-5 lg:p-0
+          className={`lg:static max-lg:hidden w-auto lg:w-auto bg-white lg:bg-transparent flex lg:flex-row items-center gap-4 p-5 lg:p-0
           }`}
         >
           <button className="bg-[#6300B3] text-white px-4 py-2 rounded-md">
