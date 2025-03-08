@@ -19,7 +19,7 @@ import {
 import Button from "../components/button";
 import JobCard from "../components/job-card";
 import { ICardDetails } from "../types/cardDetails";
-import "../styles/home.css";
+import "../styles/Home.css";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -108,8 +108,9 @@ const Home = () => {
           Choose jobs from the top employers and apply for the same.
         </p>
         <div className="job-cards flex justify-center gap-12 my-14">
-          {cardDetails.map((card) => (
+          {cardDetails.map((card, index) => (
             <JobCard
+              key={index}
               role={card.role}
               type={card.type}
               salary={card.salary}
