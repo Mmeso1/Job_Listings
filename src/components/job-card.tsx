@@ -12,9 +12,13 @@ const JobCard: React.FC<ICardDetails> = ({
   logo,
   location,
   applicants,
+  width,
 }) => {
   return (
-    <div className="bg-[#F8F2FC] border border-[#EFE2F8] rounded-lg p-4 w-[365px]">
+    <div
+      className="bg-[#F8F2FC] border border-[#EFE2F8] rounded-lg p-4 cursor-pointer"
+      style={{ width: width ? width : "365px" }}
+    >
       <div className="top flex flex-col">
         <div className="flex justify-between">
           <h1 className="text-lg font-medium">{role}</h1>

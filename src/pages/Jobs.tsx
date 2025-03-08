@@ -1,254 +1,10 @@
 import Button from "../components/button";
 import { search, experience, location } from "../assets";
-import {
-  google,
-  apple,
-  intel,
-  facebook,
-  linkedin,
-  IBM,
-  Microsoft,
-  x,
-  amazon,
-  zoom,
-  shopify,
-  wix,
-  cisco,
-  github,
-} from "../assets";
-import { ICardDetails } from "../types/cardDetails";
+import { cardDetails } from "../data/jobDetails";
 import JobCard from "../components/job-card";
 import { useState } from "react";
 
 const Jobs = () => {
-  const cardDetails: ICardDetails[] = [
-    {
-      role: "Technical Support Specialist",
-      type: "PART-TIME",
-      salary: "20,000 INR - 25,000 INR",
-      company: "Google Inc.",
-      logo: google,
-      location: "New Delhi, India",
-      applicants: "10+ applicants",
-    },
-    {
-      role: "Senior UI/UX Designer",
-      type: "FULL-TIME",
-      salary: "$30,000 - $55,000",
-      company: "Apple",
-      logo: apple,
-      location: "Boston, USA",
-      applicants: "9+ applicants",
-    },
-    {
-      role: "Marketing Officer",
-      type: "PART-TIME",
-      salary: "15,000 INR - 35,000 INR",
-      company: "Intel Corp",
-      logo: intel,
-      location: "Bangalore, India",
-      applicants: "30+ applicants",
-    },
-    {
-      role: "Senior UI/UX Designer",
-      type: "FULL-TIME",
-      salary: "$30,000 - $55,00",
-      company: "Apple",
-      logo: apple,
-      location: "Boston, USA",
-      applicants: "9+ applicants",
-    },
-    {
-      role: "Marketing Officer",
-      type: "PART-TIME",
-      salary: "15,000 INR - 35,000 INR",
-      company: "Intel Corp",
-      logo: intel,
-      location: "Bangalore, India",
-      applicants: "30+ applicants",
-    },
-    {
-      role: "Marketing Officer",
-      type: "PART-TIME",
-      salary: "15,000 INR - 35,000 INR",
-      company: "Intel Corp",
-      logo: intel,
-      location: "Bangalore, India",
-      applicants: "30+ applicants",
-    },
-    {
-      role: "Frontend Developer",
-      type: "FULL-TIME",
-      salary: "$60,000 - $80,000",
-      company: "Facebook",
-      logo: facebook, // Replace with your actual logo image for Microsoft
-      location: "Seattle, USA",
-      applicants: "20+ applicants",
-    },
-    {
-      role: "Backend Developer",
-      type: "FULL-TIME",
-      salary: "$70,000 - $100,000",
-      company: "X",
-      logo: x, // Replace with your actual logo image for Amazon
-      location: "London, UK",
-      applicants: "15+ applicants",
-    },
-    {
-      role: "Data Scientist",
-      type: "PART-TIME",
-      salary: "$50,000 - $70,000",
-      company: "Facebook",
-      logo: facebook, // Replace with your actual logo image for Facebook
-      location: "Menlo Park, USA",
-      applicants: "25+ applicants",
-    },
-    {
-      role: "Product Manager",
-      type: "FULL-TIME",
-      salary: "$80,000 - $120,000",
-      company: "Amazon",
-      logo: amazon,
-      location: "San Francisco, USA",
-      applicants: "40+ applicants",
-    },
-    {
-      role: "Mobile Developer",
-      type: "FULL-TIME",
-      salary: "$70,000 - $90,000",
-      company: "Microsoft",
-      logo: Microsoft,
-      location: "Stockholm, Sweden",
-      applicants: "18+ applicants",
-    },
-    {
-      role: "Cloud Engineer",
-      type: "FULL-TIME",
-      salary: "$90,000 - $130,000",
-      company: "IBM",
-      logo: IBM,
-      location: "Austin, USA",
-      applicants: "22+ applicants",
-    },
-    {
-      role: "HR Manager",
-      type: "FULL-TIME",
-      salary: "$60,000 - $85,000",
-      company: "Wix",
-      logo: wix,
-      location: "San Francisco, USA",
-      applicants: "35+ applicants",
-    },
-    {
-      role: "Project Manager",
-      type: "FULL-TIME",
-      salary: "$75,000 - $100,000",
-      company: "Github",
-      logo: github,
-      location: "Palo Alto, USA",
-      applicants: "14+ applicants",
-    },
-    {
-      role: "DevOps Engineer",
-      type: "FULL-TIME",
-      salary: "$80,000 - $110,000",
-      company: "LinkedIn",
-      logo: linkedin,
-      location: "Sunnyvale, USA",
-      applicants: "50+ applicants",
-    },
-    {
-      role: "SEO Specialist",
-      type: "PART-TIME",
-      salary: "$30,000 - $50,000",
-      company: "Cisco",
-      logo: cisco,
-      location: "San Francisco, USA",
-      applicants: "10+ applicants",
-    },
-    {
-      role: "Content Writer",
-      type: "FULL-TIME",
-      salary: "$40,000 - $60,000",
-      company: "Wix",
-      logo: wix,
-      location: "Tel Aviv, Israel",
-      applicants: "12+ applicants",
-    },
-    {
-      role: "Database Administrator",
-      type: "FULL-TIME",
-      salary: "$70,000 - $90,000",
-      company: "Shopify",
-      logo: shopify,
-      location: "Redwood City, USA",
-      applicants: "30+ applicants",
-    },
-    {
-      role: "Systems Analyst",
-      type: "FULL-TIME",
-      salary: "$60,000 - $85,000",
-      company: "Zoom",
-      logo: zoom,
-      location: "Walldorf, Germany",
-      applicants: "28+ applicants",
-    },
-    {
-      role: "Network Engineer",
-      type: "PART-TIME",
-      salary: "$50,000 - $75,000",
-      company: "Cisco",
-      logo: cisco,
-      location: "San Jose, USA",
-      applicants: "20+ applicants",
-    },
-    {
-      role: "Security Analyst",
-      type: "FULL-TIME",
-      salary: "$80,000 - $120,000",
-      company: "Shopify",
-      logo: shopify,
-      location: "Austin, USA",
-      applicants: "10+ applicants",
-    },
-    {
-      role: "Full-Stack Developer",
-      type: "FULL-TIME",
-      salary: "$90,000 - $120,000",
-      company: "Google Inc.",
-      logo: google,
-      location: "San Jose, USA",
-      applicants: "8+ applicants",
-    },
-    {
-      role: "Web Designer",
-      type: "PART-TIME",
-      salary: "$25,000 - $40,000",
-      company: "Shopify",
-      logo: shopify,
-      location: "Ottawa, Canada",
-      applicants: "18+ applicants",
-    },
-    {
-      role: "Game Developer",
-      type: "FULL-TIME",
-      salary: "$60,000 - $85,000",
-      company: "Intel",
-      logo: intel,
-      location: "Cary, USA",
-      applicants: "25+ applicants",
-    },
-    {
-      role: "AI Engineer",
-      type: "FULL-TIME",
-      salary: "$100,000 - $150,000",
-      company: "Github",
-      logo: github,
-      location: "Santa Clara, USA",
-      applicants: "40+ applicants",
-    },
-  ];
-
   const [showAllJobs, setShowAllJobs] = useState(false);
 
   // Show first 10 jobs by default
@@ -305,62 +61,63 @@ const Jobs = () => {
         </div>
       </div>
 
-      <div className="job-listing flex items-start justify-between mt-10">
-        <div className="filter w-full lg:w-1/4 p-4 bg-gray-100 rounded-lg">
-          <div className="heading flex justify-between items-center mb-4">
-            <p className="text-lg font-semibold">Filters</p>
-            <button className="text-[#5E6670]">Clear All</button>
+      <div className="job-listing flex items-start justify-between gap-20 mt-20">
+        <div className="flex-1 flex-col gap-8 mb-4">
+          <div className="heading flex justify-between mb-7">
+            <p className="text-lg font-semibold">Filter</p>
+            <button className="text-[#5E6670] cursor-pointer">Clear All</button>
           </div>
+          <div className="filter p-4 bg-[#F7F7F7] border border-gray-200 rounded-lg">
+            {/* Salary Range */}
+            <div className="mb-4">
+              <p className="text-sm font-semibold">Salary Range</p>
+              <input type="range" min="0" max="100" className="w-full mt-2" />
+            </div>
 
-          {/* Salary Range */}
-          <div className="mb-4">
-            <p className="text-sm font-semibold">Salary Range</p>
-            <input type="range" min="0" max="100" className="w-full mt-2" />
-          </div>
+            {/* Divider */}
+            <div className="border-b border-gray-300 my-4"></div>
 
-          {/* Divider */}
-          <div className="border-b border-gray-300 my-4"></div>
+            {/* Job Type */}
+            <div className="mb-4">
+              <p className="text-sm font-semibold my-8">Job Type</p>
+              <label className="block">
+                <input type="checkbox" className="mr-2" /> Full-Time
+              </label>
+              <label className="block">
+                <input type="checkbox" className="mr-2" /> Part-Time
+              </label>
+            </div>
 
-          {/* Job Type */}
-          <div className="mb-4">
-            <p className="text-sm font-semibold">Job Type</p>
-            <label className="block">
-              <input type="checkbox" className="mr-2" /> Full-Time
-            </label>
-            <label className="block">
-              <input type="checkbox" className="mr-2" /> Part-Time
-            </label>
-          </div>
+            {/* Divider */}
+            <div className="border-b border-gray-300 my-4"></div>
 
-          {/* Divider */}
-          <div className="border-b border-gray-300 my-4"></div>
+            {/* Work Mode */}
+            <div className="mb-4">
+              <p className="text-sm font-semibold my-8">Work Mode</p>
+              <label className="block">
+                <input type="checkbox" className="mr-2" /> Remote
+              </label>
+              <label className="block">
+                <input type="checkbox" className="mr-2" /> On-Site
+              </label>
+            </div>
 
-          {/* Work Mode */}
-          <div className="mb-4">
-            <p className="text-sm font-semibold">Work Mode</p>
-            <label className="block">
-              <input type="checkbox" className="mr-2" /> Remote
-            </label>
-            <label className="block">
-              <input type="checkbox" className="mr-2" /> On-Site
-            </label>
-          </div>
+            {/* Divider */}
+            <div className="border-b border-gray-300 my-4"></div>
 
-          {/* Divider */}
-          <div className="border-b border-gray-300 my-4"></div>
-
-          {/* Experience Level */}
-          <div className="mb-4">
-            <p className="text-sm font-semibold">Experience Level</p>
-            <label className="block">
-              <input type="checkbox" className="mr-2" /> Junior
-            </label>
-            <label className="block">
-              <input type="checkbox" className="mr-2" /> Mid
-            </label>
-            <label className="block">
-              <input type="checkbox" className="mr-2" /> Senior
-            </label>
+            {/* Experience Level */}
+            <div className="mb-4">
+              <p className="text-sm font-semibold my-8">Experience Level</p>
+              <label className="block">
+                <input type="checkbox" className="mr-2" /> Junior
+              </label>
+              <label className="block">
+                <input type="checkbox" className="mr-2" /> Mid
+              </label>
+              <label className="block">
+                <input type="checkbox" className="mr-2" /> Senior
+              </label>
+            </div>
           </div>
         </div>
 
@@ -383,6 +140,7 @@ const Jobs = () => {
                 role={card.role}
                 salary={card.salary}
                 type={card.type}
+                width="400px"
               />
             ))}
           </div>
