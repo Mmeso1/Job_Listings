@@ -87,13 +87,32 @@ const Navigation = () => {
                 About Us
               </NavLink>
             </li>
+
+            {/* EXTRA CTA LINKS FOR MOBILE USERS */}
+            <li className="lg:hidden">
+              <NavLink
+                to="contact-us"
+                className="text-gray-700"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact Us
+              </NavLink>
+            </li>
+            <li className="lg:hidden">
+              <NavLink
+                to="/login"
+                className="text-gray-700"
+                onClick={() => setIsOpen(false)}
+              >
+                Login
+              </NavLink>
+            </li>
           </ul>
         </nav>
 
         {/* Call to Action Buttons (Same visibility as nav) */}
         <section
-          className={`absolute lg:static top-[calc(100%+10px)] left-0 w-full lg:w-auto bg-white lg:bg-transparent flex flex-col lg:flex-row items-center gap-4 p-5 lg:p-0 ${
-            isOpen ? "block shadow-md" : "hidden lg:flex"
+          className={`lg:static w-auto hidden lg:w-auto bg-white lg:bg-transparent lg:flex-row items-center gap-4 p-5 lg:p-0
           }`}
         >
           <button className="bg-[#6300B3] text-white px-4 py-2 rounded-md">
@@ -103,6 +122,7 @@ const Navigation = () => {
           </button>
           <button className="bg-gray-200 px-4 py-2 rounded-md">
             <NavLink to="/login" onClick={() => setIsOpen(false)}>
+              {" "}
               Login
             </NavLink>
           </button>

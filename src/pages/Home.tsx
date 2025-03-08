@@ -55,7 +55,7 @@ const Home = () => {
   return (
     <>
       <section className="hero flex flex-col md:flex-row justify-between items-center py-14 md:py-24 px-8 md:px-20">
-        <div className="left flex flex-col gap-4 w-full md:w-1/2">
+        <div className="left flex flex-col gap-4 w-full lg:w-1/2">
           <div className="hero-intro-text">
             <h1 className="text-[3.5rem]/16 font-medium text-[#303030]">
               Find a job that aligns with your interests and skills
@@ -109,7 +109,7 @@ const Home = () => {
         <img
           src={heroImg}
           alt="hero image"
-          className="hidden xl:block w-full md:w-1/2"
+          className="hidden lg:block w-full md:w-1/2"
         />
       </section>
 
