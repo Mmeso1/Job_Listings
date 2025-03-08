@@ -35,7 +35,7 @@ const JobCard: React.FC<ICardDetails> = ({
         </div>
       </div>
       <div className="middle flex items-center gap-3 mt-3 ml-1.5">
-        <img src={logo} alt="google icon" />
+        <img src={logo} alt="google icon" className="h-auto w-10" />
         <div className="flex flex-col gap-1 items-start">
           <h1 className="font-medium">{company}</h1>
           <div className="flex gap-1 -m-0.5">
