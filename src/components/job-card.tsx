@@ -5,7 +5,7 @@ import Button from "./button";
 import { ICardDetails } from "../types/cardDetails";
 
 interface JobCardProps extends ICardDetails {
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const JobCard: React.FC<JobCardProps> = ({
