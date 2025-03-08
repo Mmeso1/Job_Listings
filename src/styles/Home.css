@@ -1,0 +1,71 @@
+.hero,
+footer {
+  background: linear-gradient(
+    135deg,
+    rgba(197, 153, 229, 0.4) 0%,
+    /* C599E5 at 0% with 60% opacity */ rgba(197, 153, 229, 0) 51%,
+    /* C599E5 at 51% with 0% opacity (fades out) */ rgba(226, 204, 242, 0.6)
+      100% /* E2CCF2 at 100% with 80% opacity */
+  );
+}
+
+.search {
+  background-color: #fff;
+  border: 1px solid #e4e5e8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.search input::placeholder {
+  color: #9199a3;
+}
+
+h1 {
+  color: #303030;
+}
+
+.light-p {
+  color: #767f8c;
+  font-weight: 300;
+}
+
+.hiring-companies > div > span {
+  border: 0.5px solid #e4e5e8;
+  width: 35%;
+  height: 50%;
+  display: flex;
+}
+
+.top-footer h3 {
+  color: #6300b3;
+  font-size: 20px;
+}
+
+.top-footer .quick-links,
+.top-footer .candidate,
+.top-footer .employers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.top-footer .quick-links > div,
+.top-footer .candidate > div,
+.top-footer .employers > div {
+  margin-top: 0.5rem;
+}
+
+.top-footer .quick-links a,
+.top-footer .candidate a,
+.top-footer .employers a {
+  color: #9199a3;
+  text-decoration: none;
+}
+
+.top-footer .quick-links a:hover,
+.top-footer .candidate a:hover,
+.top-footer .employers a:hover {
+  color: #ae71db;
+}
